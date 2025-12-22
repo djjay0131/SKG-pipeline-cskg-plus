@@ -1,0 +1,7 @@
+data/processed/computer_science_1.json
+data/processed/dygiepp_output/*
+data/processed/cso_output/*
+data/processed/other_info/*
+dataset/computer_science/computer_science_1.json
+src/extraction/stanford-corenlp-4.5.4
+src/extraction/dygiepp

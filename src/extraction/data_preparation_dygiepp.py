@@ -2,8 +2,8 @@ import json
 import nltk
 import os
 
-data_path = '../../dataset/computer_science/'
-data_output_dir = '../../data/processed/dygiepp_input/'
+data_path = 'C:/Users/vrusa/OneDrive/Documents/GitHub/CS-KG-merge/dataset/computer_science/'
+data_output_dir = 'C:/Users/vrusa/OneDrive/Documents/GitHub/CS-KG-merge/data/processed/'
 
 try:
     os.mkdir(data_output_dir)

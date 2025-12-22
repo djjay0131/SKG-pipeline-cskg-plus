@@ -1,6 +1,7 @@
 # command to run the stanford core nlp server
 # nohup java -mx8g -cp "*" edu.stanford.nlp.pipeline.StanfordCoreNLPServer -port 9050 -timeout 15000 >/dev/null 2>&1 &
 
+import nltk
 from nltk.tokenize.treebank import TreebankWordDetokenizer
 from stanfordcorenlp import StanfordCoreNLP
 from nltk.corpus import stopwords
@@ -13,6 +14,8 @@ import sys
 import ast
 import os
 import re
+
+nltk.download('stopwords')
 
 cso_dir = '../../data/processed/cso_output/'
 dygiepp_output_dump_dir = '../../data/processed/dygiepp_output/'
