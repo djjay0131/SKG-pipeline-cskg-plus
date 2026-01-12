@@ -1,0 +1,30 @@
+# CS-KG Pipeline Requirements (Construction, Validation, Post-processing)
+# Python 3.9 required
+# Note: DyGIE++ extraction uses its own container with allennlp
+# Note: CSO classifier has dependency issues - may need to install separately or use newer version
+
+# Core ML/NLP Libraries
+torch>=1.9.0
+transformers>=4.11.0
+sentence-transformers>=2.0.0
+scikit-learn>=0.24.0
+
+# NLP Tools
+nltk>=3.6
+# cso-classifier>=2.3.3  # Temporarily disabled due to gensim 3.8.3 compatibility issues
+
+# Data Processing
+pandas>=1.3.0
+numpy>=1.21.0
+networkx>=2.6
+
+# Utilities
+tqdm>=4.62.0
+beautifulsoup4>=4.9.3
+lxml>=4.6.3
+python-Levenshtein>=0.12.2
+django>=3.2.0
+
+# SPARQL and RDF
+SPARQLWrapper>=1.8.5
+rdflib>=6.0.0

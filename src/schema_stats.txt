@@ -1,0 +1,245 @@
+Loading triples from CSV...
+
+================================================================================
+CS-KG SCHEMA ANALYSIS
+================================================================================
+
+📊 BASIC STATISTICS:
+   Total triples: 28,563
+   Unique subjects: 17,727
+   Unique objects: 17,409
+   Unique relations: 39
+   Total unique entities: 27,715
+
+🏷️  ENTITY TYPES:
+
+   Subject Types Distribution:
+      Method                        : 10,101
+      OtherEntity                   : 8,545
+      Task                          : 5,521
+      Material                      : 2,901
+      Metric                        : 1,495
+
+   Object Types Distribution:
+      Method                        : 10,977
+      OtherEntity                   : 9,901
+      Task                          : 3,367
+      Material                      : 3,046
+      Metric                        : 1,272
+
+   Combined Entity Types (Top 20):
+      Method                        : 21,078
+      OtherEntity                   : 18,446
+      Task                          : 8,888
+      Material                      : 5,947
+      Metric                        : 2,767
+
+🔗 RELATIONS:
+   Total unique relations: 39
+
+   Top 40 Relations:
+      uses                                              : 10,189
+      skos:broader/is/hyponym-of                        : 4,894
+      includes                                          : 2,919
+      analyzes                                          : 1,596
+      produces                                          : 1,366
+      matches                                           : 745
+      acquires                                          : 677
+      based-on                                          : 663
+      improves                                          : 548
+      provides                                          : 545
+      solves                                            : 473
+      supports                                          : 464
+      proposes                                          : 448
+      executes                                          : 408
+      affects                                           : 304
+      identifies                                        : 242
+      limits                                            : 231
+      learns                                            : 212
+      predicts                                          : 209
+      guides                                            : 206
+      manages                                           : 181
+      contributes-to                                    : 149
+      transfers                                         : 148
+      causes                                            : 143
+      adapts                                            : 105
+      extracts                                          : 98
+      classifies                                        : 68
+      links                                             : 66
+      outperforms                                       : 41
+      interacts-with                                    : 36
+      visualizes                                        : 34
+      discusses                                         : 32
+      highlights                                        : 32
+      processes                                         : 31
+      automates                                         : 24
+      annotates                                         : 18
+      standardizes                                      : 11
+      lacks                                             : 5
+      queries                                           : 2
+
+🔀 SCHEMA PATTERNS (Subject Type → Relation → Object Type):
+
+   Top 30 patterns:
+      Task                 --[uses                          ]--> Method                (2,033 occurrences)
+      Method               --[uses                          ]--> Method                (1,676 occurrences)
+      OtherEntity          --[uses                          ]--> Method                (1,606 occurrences)
+      OtherEntity          --[skos:broader/is/hyponym-of    ]--> OtherEntity           (987 occurrences)
+      Method               --[uses                          ]--> OtherEntity           (841 occurrences)
+      Method               --[skos:broader/is/hyponym-of    ]--> Method                (814 occurrences)
+      OtherEntity          --[uses                          ]--> OtherEntity           (691 occurrences)
+      Task                 --[uses                          ]--> OtherEntity           (586 occurrences)
+      OtherEntity          --[includes                      ]--> OtherEntity           (570 occurrences)
+      Method               --[includes                      ]--> OtherEntity           (510 occurrences)
+      Material             --[uses                          ]--> Method                (441 occurrences)
+      Method               --[skos:broader/is/hyponym-of    ]--> OtherEntity           (381 occurrences)
+      Method               --[uses                          ]--> Material              (369 occurrences)
+      Metric               --[analyzes                      ]--> Method                (340 occurrences)
+      OtherEntity          --[skos:broader/is/hyponym-of    ]--> Method                (305 occurrences)
+      Method               --[uses                          ]--> Task                  (293 occurrences)
+      Task                 --[uses                          ]--> Material              (282 occurrences)
+      Task                 --[uses                          ]--> Task                  (279 occurrences)
+      Method               --[matches                       ]--> Method                (272 occurrences)
+      Method               --[includes                      ]--> Method                (270 occurrences)
+      Material             --[skos:broader/is/hyponym-of    ]--> Material              (264 occurrences)
+      Task                 --[skos:broader/is/hyponym-of    ]--> Task                  (231 occurrences)
+      Method               --[produces                      ]--> OtherEntity           (224 occurrences)
+      Method               --[produces                      ]--> Method                (216 occurrences)
+      Task                 --[skos:broader/is/hyponym-of    ]--> OtherEntity           (212 occurrences)
+      Method               --[skos:broader/is/hyponym-of    ]--> Task                  (206 occurrences)
+      Material             --[skos:broader/is/hyponym-of    ]--> OtherEntity           (204 occurrences)
+      Method               --[analyzes                      ]--> OtherEntity           (194 occurrences)
+      OtherEntity          --[skos:broader/is/hyponym-of    ]--> Material              (183 occurrences)
+      OtherEntity          --[produces                      ]--> OtherEntity           (183 occurrences)
+
+📚 EXTRACTION SOURCES:
+   Triples by extraction source:
+      dygiepp                       : 14,329
+      pos tagger                    : 10,344
+      openie                        : 4,558
+      dependency tagger             : 2,385
+
+💪 SUPPORT DISTRIBUTION:
+   Min support: 1
+   Max support: 6
+   Mean support: 1.11
+   Median support: 1
+
+   Support count distribution:
+      Support = 1: 25,826 triples
+      Support = 2: 2,317 triples
+      Support = 3: 395 triples
+      Support = 4: 20 triples
+      Support = 5: 1 triples
+      Support = 6: 4 triples
+
+📏 SOURCE LENGTH DISTRIBUTION:
+   Number of extraction sources per triple:
+      1 source(s): 25,930 triples
+      2 source(s): 2,229 triples
+      3 source(s): 388 triples
+      4 source(s): 16 triples
+
+📋 SAMPLE TRIPLES BY ENTITY TYPE:
+
+   Method:
+      baynorm beer combination                 --[executes            ]--> mixed dropout and batch effect normaliza [openie]
+      chemical process simulator               --[produces            ]--> conceptual design                        [pos tagger]
+      graph convolution network                --[matches             ]--> bert                                     [dygiepp]
+      particle swarm optimization ( pso )      --[uses                ]--> unreliable server queuing model          [pos tagger]
+      particle swarm optimization ( pso )      --[improves            ]--> unreliable server queuing model          [pos tagger]
+
+   OtherEntity:
+      motor structure                          --[includes            ]--> macro motion component                   [dygiepp]
+      fiscal function                          --[solves              ]--> fiscal server of the regulatory authorit [pos tagger]
+      fiscal function                          --[uses                ]--> fiscal server of the regulatory authorit [dygiepp]
+      trans cap                                --[matches             ]--> capsnet architecture                     [dygiepp]
+      bar instability                          --[analyzes            ]--> flat stellar disc                        [pos tagger]
+
+   Task:
+      digital transformation                   --[acquires            ]--> agricultural sector                      [pos tagger]
+      history matching                         --[uses                ]--> bayesian framework                       [dygiepp]
+      ranking                                  --[uses                ]--> fuzzy technique                          [dygiepp]
+      strategy formulation                     --[uses                ]--> analysis tool                            [dygiepp]
+      motion estimation                        --[uses                ]--> hazy video                               [dygiepp]
+
+   Material:
+      creativity                               --[includes            ]--> psychological strain                     [pos tagger]
+      fuzzy set                                --[analyzes            ]--> mobile application                       [pos tagger]
+      vertical domain                          --[improves            ]--> energy effi                              [pos tagger]
+      taxi                                     --[contributes-to      ]--> air quality                              [pos tagger]
+      material                                 --[includes            ]--> polymer nature                           [dygiepp]
+
+   Metric:
+      multi crafti                             --[uses                ]--> collision energy                         [dygiepp]
+      purchase intention                       --[analyzes            ]--> non customized ad                        [dygiepp]
+      exam time                                --[matches             ]--> medic                                    [pos tagger]
+      exam time                                --[analyzes            ]--> medic                                    [dygiepp]
+      qber                                     --[uses                ]--> feedback loop                            [dygiepp]
+
+⭐ HIGHEST SUPPORT TRIPLES (Top 25):
+      [support= 6] data collection                     --[uses                ]--> interview                          
+                   Types: Task            → Material        | Sources: pos tagger, dygiepp, dependency tagger
+      [support= 6] covid 19                            --[skos:broader/is/hyponym-of]--> keywords                           
+                   Types: Method          → Material        | Sources: dygiepp
+      [support= 6] teledermatology                     --[uses                ]--> whatsapp messenger                 
+                   Types: Method          → Material        | Sources: openie, dygiepp, dependency tagger
+      [support= 6] data collection technique           --[uses                ]--> interview                          
+                   Types: Method          → Material        | Sources: openie, dygiepp, dependency tagger
+      [support= 5] interview                           --[skos:broader/is/hyponym-of]--> data collection technique          
+                   Types: Material        → Method          | Sources: dygiepp
+      [support= 4] control                             --[uses                ]--> ion current                        
+                   Types: Task            → OtherEntity     | Sources: pos tagger, openie, dygiepp, dependency tagger
+      [support= 4] industrial and social life          --[uses                ]--> origami robot                      
+                   Types: Task            → Method          | Sources: pos tagger, openie, dygiepp, dependency tagger
+      [support= 4] calculation                         --[uses                ]--> unified electromagnetic waves diffr
+                   Types: OtherEntity     → Method          | Sources: pos tagger, openie, dygiepp, dependency tagger
+      [support= 4] genetic diversity                   --[includes            ]--> geographical component             
+                   Types: OtherEntity     → Method          | Sources: pos tagger, openie, dygiepp, dependency tagger
+      [support= 4] data analysis                       --[includes            ]--> data collection                    
+                   Types: Task            → Task            | Sources: pos tagger, openie, dygiepp, dependency tagger
+      [support= 4] vibration characteristic            --[produces            ]--> mathematical model                 
+                   Types: OtherEntity     → Method          | Sources: pos tagger, openie
+      [support= 4] gating mechanism                    --[uses                ]--> continuous formulation             
+                   Types: Method          → Method          | Sources: pos tagger, openie, dygiepp, dependency tagger
+      [support= 4] platform                            --[produces            ]--> normative framework                
+                   Types: Material        → Method          | Sources: pos tagger, dependency tagger
+      [support= 4] lowland geosystems                  --[includes            ]--> uniform horizontal structure       
+                   Types: Material        → OtherEntity     | Sources: pos tagger, openie, dygiepp, dependency tagger
+      [support= 4] semi supervised learning algorithm  --[uses                ]--> unlabeled dataset                  
+                   Types: Method          → Material        | Sources: pos tagger, openie, dygiepp, dependency tagger
+      [support= 4] linear uncertain preference relatio --[uses                ]--> uncertain variable                 
+                   Types: Task            → OtherEntity     | Sources: pos tagger, openie, dygiepp, dependency tagger
+      [support= 4] bumper                              --[includes            ]--> ballistic limit damage equation    
+                   Types: Method          → Method          | Sources: pos tagger, openie, dygiepp, dependency tagger
+      [support= 4] electrical power engineer           --[uses                ]--> prediction model                   
+                   Types: Method          → Method          | Sources: pos tagger, openie, dygiepp, dependency tagger
+      [support= 4] sentence formation                  --[uses                ]--> vos word order                     
+                   Types: Task            → OtherEntity     | Sources: pos tagger, openie, dygiepp, dependency tagger
+      [support= 4] gamification component              --[uses                ]--> neural network                     
+                   Types: Method          → Method          | Sources: pos tagger, openie, dygiepp, dependency tagger
+      [support= 4] internet of vehicle                 --[uses                ]--> roadside unit                      
+                   Types: Task            → OtherEntity     | Sources: pos tagger, openie, dygiepp, dependency tagger
+      [support= 4] kuninganmass                        --[uses                ]--> instagram social medium            
+                   Types: Method          → Material        | Sources: openie, dygiepp, dependency tagger
+      [support= 4] sampling technique                  --[uses                ]--> purposive sampling                 
+                   Types: Method          → Method          | Sources: openie, dygiepp, dependency tagger
+      [support= 4] information gathering technique     --[uses                ]--> participant observation            
+                   Types: Task            → Method          | Sources: pos tagger, openie, dygiepp, dependency tagger
+      [support= 4] data collection                     --[uses                ]--> direct observation method          
+                   Types: Task            → Method          | Sources: pos tagger, openie, dygiepp, dependency tagger
+
+🔬 ANALYSIS BY RELATION TYPE:
+
+   DyGIE++ Relations:
+
+   Hierarchical Relations:
+      Total: 4,894
+         part build orientation         --[skos:broader/is/hyponym-of]--> anisotropic mechanical propert
+         competence                     --[skos:broader/is/hyponym-of]--> keywords
+         one dimensional continuum theo --[skos:broader/is/hyponym-of]--> device performance calculation
+         model 1                        --[skos:broader/is/hyponym-of]--> empirical model
+         continuous recurrent units cru --[skos:broader/is/hyponym-of]--> neural architecture
+
+================================================================================
+

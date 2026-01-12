@@ -145,6 +145,7 @@ def getOpenieTriples(corenlp_out, dygiepp, cso_topics):
 		sentence = corenlp_out['sentences'][i]
 		openie = sentence['openie']
 
+		dygiepp_sentence_entities = []
 		if i < len(dygiepp.keys()):
 			dygiepp_sentence_entities = [x for (x, xtype) in dygiepp[i]['entities']]
 			#print(dygiepp_sentence_entities)
@@ -197,6 +198,7 @@ def getPosTriples(corenlp_out, dygiepp, cso_topics):
 		sentence_tokens_text_lemma = [t['lemma'] for t in sentence['tokens']]
 		sentence_tokens_pos = [t['pos'] for t in sentence['tokens']]
 
+		dygiepp_sentence_entities = []
 		if i < len(dygiepp.keys()):
 			dygiepp_sentence_entities = [x for (x, xtype) in dygiepp[i]['entities']]
 		acronyms = detectAcronyms(dygiepp_sentence_entities + cso_topics)
@@ -283,6 +285,7 @@ def getDependencyTriples(corenlp_out, dygiepp, cso_topics):
 			g.add_node(dependent_token_number, postag=tokens[dependent_token_number - 1]['pos'], text=tokens[governor_token_number - 1]['lemma'])
 			g.add_edge(governor_token_number, dependent_token_number, label=dep['dep'])
 
+		dygiepp_sentence_entities = []
 		if i < len(dygiepp.keys()):
 			dygiepp_sentence_entities = [x for (x, xtype) in dygiepp[i]['entities']]
 		acronyms = detectAcronyms(dygiepp_sentence_entities + cso_topics)

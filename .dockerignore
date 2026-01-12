@@ -1,0 +1,56 @@
+# Exclude entire extraction directory (uses separate DyGIE++ container)
+src/extraction/
+
+# Exclude large model files and pretrained weights
+src/extraction/dygiepp/pretrained/
+src/extraction/dygiepp/scibert_model/
+src/extraction/dygiepp/hf_cache/
+src/extraction/stanford-corenlp-4.5.4/
+
+# Exclude processed data (will be generated in container or mounted)
+data/processed/
+data/done/
+dataset/
+
+# Exclude output directories (will be mounted as volumes)
+csv_release/
+rdf_release/
+
+# Exclude git
+.git/
+.gitignore
+
+# Exclude documentation and memory bank (not needed in container)
+memory-bank/
+construction/
+*.md
+!README.md
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker
+docker-compose.yml
+Dockerfile
+.dockerignore
